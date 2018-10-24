@@ -6,15 +6,12 @@ def merge(directory):
 	numbers=[int(file_name.split('.')[0]) for file_name in os.listdir(directory)]
 	start=min(numbers)
 	end=max(numbers)+1
-	s=b''
-	#合并ts片段
-	for n in range(start,end):
-		file_path=os.path.join(directory,f'{n}.ts')
-		with open(file_path,'rb') as f:
-			s+=f.read()
-	#存为与文件夹同名的ts文件
+	#合并ts片段，存为与文件夹同名的ts文件
 	with open(f'{directory}.ts','wb') as f:
-		f.write(s)
+		for n in range(start,end):
+			file_path=os.path.join(directory,f'{n}.ts')
+			with open(file_path,'rb') as g:
+				f.write(g.read())
 
 if __name__=='__main__':
 	merge(sys.argv[1])#片段所在文件夹名作为命令行参数
