@@ -1,6 +1,6 @@
 # m3u8
 a simple tool for downloading and merging video fragments, which may be encrypted, listed in m3u8 file
-## requirements
+## requirement
 scrapy  
 pycryptodome
 ## usage
