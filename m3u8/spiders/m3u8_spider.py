@@ -53,7 +53,7 @@ class m3u8_Spider(scrapy.Spider):
 			self.iv=bytes.fromhex(match.group(1)) if match else None
 		else:
 			self.key=None
-		self.file_names=re.findall(r'\S+\.ts',response.text)#m3u8包含的ts片段名
+		self.file_names=re.findall(r'\S+\.ts\S*',response.text)#m3u8包含的ts片段名
 		self.directory=hashlib.md5(current_url.encode('utf-8')).hexdigest()#ts片段存储目录
 		if not os.path.exists(self.directory):
 			os.mkdir(self.directory)
