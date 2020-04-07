@@ -33,7 +33,7 @@ class m3u8_Spider(scrapy.Spider):
         try:
             m3u8 = re.search(r'http\S+\.m3u8', response.text).group()
             yield scrapy.Request(url=m3u8, callback=self.parse_m3u8)
-        except:
+        except AttributeError:
             self.logger.error('no m3u8 found in the page')
 
     def parse_m3u8(self, response: scrapy.http.Response):
