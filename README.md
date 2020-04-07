@@ -1,4 +1,7 @@
 # m3u8
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/eagleoflqj/m3u8.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/eagleoflqj/m3u8/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/eagleoflqj/m3u8.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/eagleoflqj/m3u8/context:python)
+  
 a simple tool for downloading and merging video fragments, which may be encrypted, listed in m3u8 file
 ## environment
 * Linux, Windows 10, macOS
