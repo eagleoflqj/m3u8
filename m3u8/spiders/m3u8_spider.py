@@ -9,8 +9,8 @@ import requests
 import scrapy
 from Crypto.Cipher import AES
 
-from m3u8.settings import USER_AGENT
 from m3u8.merge_ts import merge
+from m3u8.settings import USER_AGENT
 
 
 class m3u8_Spider(scrapy.Spider):
